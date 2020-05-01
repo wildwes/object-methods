@@ -7,6 +7,7 @@ let painter = {
     // Find out how to add a '$' to the results of the function
     paint: function () {
         return this.cost_per_hour * workHours;
+        // return `$${this.cost_per_hour * workHours}`; puts the '$' within the method
     }
 }
 // Add an action that the painter can perform(a property whose value is a function ).
@@ -15,10 +16,13 @@ let painter = {
 
 let workHours = 5;
 // push new tools to tools
-let newTools = [];
+let newTools = painter.tools.push('new paint');
 
 painter.paint();
 
-console.log(painter.paint())
+console.log(`Here are my ${painter.tools} `)
+
+console.log(`$${painter.paint()}`)
+// console.log(painter.paint()) puts the '$' in the console.log and is prefered
 
 
