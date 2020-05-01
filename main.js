@@ -15,9 +15,11 @@ let painter = {
 
 let workHours = 5;
 // push new tools to tools
-let newTools = [];
+let newTools = painter.tools.push('new paint');
 
 painter.paint();
+
+console.log(`Here are my ${painter.tools}`)
 
 console.log(painter.paint())
 
